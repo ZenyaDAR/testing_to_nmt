@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" style="width: 100%;height: 100%">
+<html lang="ru" style="width: 100%;height: 100%">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -18,12 +18,13 @@
                 Пример:<br> - Слово: “Молоко”. Ответ: “молокО”.
             </p>
             <div class="inputs" style="display: flex; flex-wrap: wrap;align-items: center;margin-top: 36px">
-                <input  id="input" type="text" placeholder="Ответ" style="font-family: 'Arial';font-style: normal;font-weight: 400;font-size: 32px;line-height: 37px;color: #B0B0B0;padding: 13px 29px; margin-right: 10px; outline:none;border: none; width: 568px;height: 37px;background: #FFFFFF;border-radius: 10px;">
+                <input  id="input" type="text" placeholder="Ответ" onkeypress="keyPress(event)" style="font-family: 'Arial';font-style: normal;font-weight: 400;font-size: 32px;line-height: 37px;padding: 13px 29px; margin-right: 10px; outline:none;border: none; width: 568px;height: 37px;background: #FFFFFF;border-radius: 10px;">
                 <button id="button" style="cursor: pointer; outline:none;border: none; color: white;font-family: 'Arial';font-weight: 400;font-size: 32px;line-height: 37px; width: 253px;height: 63px;background: #5B00F0;border-radius: 10px;">Готово</button>
+                <h2 id="answer" style="margin: 20px;padding: 0;color: white;font-family: 'Arial';font-style: normal;font-weight: 400;font-size: 32px;line-height: 37px;" ></h2>
             </div>
             <div class="count">
                 <p style="margin: 0;margin-top: 30px; color: #9BFF99;font-family: 'Arial';font-style: normal;font-weight: 400;font-size: 32px;line-height: 37px;">Правильно: <span id="positive" style="color: white;"></span></p>
-                <p style="margin: 0;margin-top: 8px;color: #FF7878;font-family: 'Arial';font-style: normal;font-weight: 400;font-size: 32px;line-height: 37px;">Неправельно: <span id="negative" style="color: white;"></span></p>
+                <p style="margin: 0;margin-top: 8px;color: #FF7878;font-family: 'Arial';font-style: normal;font-weight: 400;font-size: 32px;line-height: 37px;">Неправильно: <span id="negative" style="color: white;"></span></p>
             </div>
             <div style="width: 100%; margin-top: 36px;">
                 <button id="refresh" style="outline: none;border: none; width: 253px;height: 63px;background: #4402AF;border-radius: 10px;font-family: 'Arial';font-style: normal;font-weight: 400;font-size: 32px;line-height: 37px;color: #FFFFFF;">

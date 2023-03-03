@@ -6,6 +6,7 @@ const input = document.getElementById('input')
 const positive = document.getElementById('positive');
 const negative = document.getElementById('negative');
 const refreshButton = document.getElementById('refresh')
+const answer = document.getElementById('answer')
 
 // must be storaged in the local state
 let positiveCounter = 0;
@@ -270,13 +271,13 @@ const onButtonClick = () => {
 
     if (userInput !== getCurrentWordArr()[1]) {
         // replace alert on html element. E.g. <div> Неправильно. Правильный... </div>
-        alert(`Неправильно. Правильный ответ: ${getCurrentWordArr()[1]}. Ваш ответ: ${userInput}`);
+        answer.innerHTML = `Неправильно. Правильный ответ: ${getCurrentWordArr()[1]}. Ваш ответ: ${userInput}`
         input.value = null
         negativeCounter++;
         negative.innerHTML= negativeCounter
     } else {
         // replace alert on html element. E.g. <div> Правильно! </div>
-        alert("Правильно!");
+        answer.innerHTML = "Правильно!"
 
         positiveCounter++;
         positive.innerHTML = positiveCounter
@@ -290,7 +291,15 @@ const onButtonClick = () => {
 
 const onRestartButton = () => { initData(); }
 
+const keyPress = event => {
+    if(event.keyCode === 13){
+        onButtonClick()
+    }
+}
 
+input.addEventListener('focus', () => {
+    answer.innerHTML = null
+})
 positive.innerHTML = positiveCounter
 negative.innerHTML= negativeCounter
 button.addEventListener('click', () => onButtonClick())
