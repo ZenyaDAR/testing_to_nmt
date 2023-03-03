@@ -251,6 +251,7 @@ const initData = () => {
     currentWordIndex = 0;
     positiveCounter = 0;
     negativeCounter = 0;
+    answer.innerHTML = '';
     positive.innerHTML = positiveCounter
     negative.innerHTML= negativeCounter
 }
@@ -272,13 +273,13 @@ const onButtonClick = () => {
     if(userInput.length > 0){
         if (userInput !== getCurrentWordArr()[1]) {
             // replace alert on html element. E.g. <div> Неправильно. Правильный... </div>
-            answer.innerHTML = `Неправильно. Правильный ответ: ${getCurrentWordArr()[1]}. Ваш ответ: ${userInput}`
+            answer.innerHTML = `<span style="color: #FF7878">Неправильно. Правильный ответ: ${getCurrentWordArr()[1]}. Ваш ответ: ${userInput}<span/>`
             input.value = null
             negativeCounter++;
             negative.innerHTML= negativeCounter
         } else {
             // replace alert on html element. E.g. <div> Правильно! </div>
-            answer.innerHTML = "Правильно!"
+            answer.innerHTML = `<span style="color: #9BFF99">Правильно!<span/>`
 
             positiveCounter++;
             positive.innerHTML = positiveCounter
@@ -299,7 +300,7 @@ const keyPress = event => {
 }
 
 input.addEventListener('focus', () => {
-    answer.innerHTML = null
+    answer.innerHTML = ""
 })
 positive.innerHTML = positiveCounter
 negative.innerHTML= negativeCounter
