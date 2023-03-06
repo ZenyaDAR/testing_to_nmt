@@ -306,4 +306,4 @@ positive.innerHTML = positiveCounter
 negative.innerHTML= negativeCounter
 button.addEventListener('click', () => onButtonClick())
 refreshButton.addEventListener('click',() => onRestartButton())
-document.onloadstart(generateWord())
+document.onload(generateWord())

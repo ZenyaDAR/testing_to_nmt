@@ -1,0 +1,125 @@
+.content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial';
+    font-style: normal;
+}
+
+.content_container {
+    width: 930px;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap
+}
+
+h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 55px;
+    color: #FFFFFF;
+}
+
+.title_first {
+    margin: 0;
+    margin-top: 21px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 41px;
+    color: #FFFFFF;
+}
+
+.title_second {
+    margin: 0;
+    margin-top: 21px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 41px;
+    color: #FFFFFF;
+}
+
+.inputs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 36px
+}
+
+.input {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 37px;
+    padding: 13px 29px;
+    margin-right: 10px;
+    outline: none;
+    border: none;
+    width: 568px;
+    height: 37px;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.btn_com {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: white;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 37px;
+    width: 253px;
+    height: 63px;
+    background: #5B00F0;
+    border-radius: 10px;
+}
+
+h2 {
+    margin: 20px 0;
+    padding: 0;
+    color: white;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 37px;
+}
+
+.correct {
+    margin: 0;
+    margin-top: 30px;
+    color: #9BFF99;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 37px;
+}
+
+.noCorrect {
+    margin: 0;
+    margin-top: 8px;
+    color: #FF7878;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 37px;
+}
+
+.refr {
+    width: 100%;
+    margin-top: 36px;
+}
+
+.btn_refr {
+    outline: none;
+    border: none;
+    width: 253px;
+    height: 63px;
+    background: #4402AF;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 37px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+

@@ -5,35 +5,37 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="adaptiv.css">
     <title>НМТ Наголоси</title>
 </head>
 <body style="margin: 0; background: #1B1B1B;">
-    <div class="content" style="width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center">
-        <div class="content_container" style="width: 890px;display: flex;justify-content: flex-start;flex-wrap: wrap">
-            <h1 style="margin: 0;font-family: 'Arial';font-style: normal;font-weight: 700;font-size: 48px;line-height: 55px;color: #FFFFFF;">Слово: “<span style="color: #FFC909" id="word"></span>”</h1>
-            <p style="font-family: 'Arial';margin: 0;margin-top: 21px; font-style: normal;font-weight: 400;font-size: 36px;line-height: 41px;color: #FFFFFF;">
-                В ответе напишите слово маленькими буквами. Большую букву поставьте на месте ударения.
-            </p>
-            <p style="font-family: 'Arial';margin: 0;margin-top: 21px;font-style: normal;font-weight: 400;font-size: 36px;line-height: 41px;color: #FFFFFF;">
-                Пример:<br> - Слово: “Молоко”. Ответ: “молокО”.
-            </p>
-            <div class="inputs" style="display: flex; flex-wrap: wrap;align-items: center;margin-top: 36px">
-                <input  id="input" type="text" placeholder="Ответ" onkeyup="keyPress(event)" style="font-family: 'Arial';font-style: normal;font-weight: 400;font-size: 32px;line-height: 37px;padding: 13px 29px; margin-right: 10px; outline:none;border: none; width: 568px;height: 37px;background: #FFFFFF;border-radius: 10px;">
-                <button id="button" style="cursor: pointer; outline:none;border: none; color: white;font-family: 'Arial';font-weight: 400;font-size: 32px;line-height: 37px; width: 253px;height: 63px;background: #5B00F0;border-radius: 10px;">Готово</button>
-                <h2 id="answer" style="margin: 20px 0;padding: 0;color: white;font-family: 'Arial';font-style: normal;font-weight: 400;font-size: 32px;line-height: 37px;" ></h2>
-            </div>
-            <div class="count">
-                <p style="margin: 0;margin-top: 30px; color: #9BFF99;font-family: 'Arial';font-style: normal;font-weight: 400;font-size: 32px;line-height: 37px;">Правильно: <span id="positive" style="color: white;"></span></p>
-                <p style="margin: 0;margin-top: 8px;color: #FF7878;font-family: 'Arial';font-style: normal;font-weight: 400;font-size: 32px;line-height: 37px;">Неправильно: <span id="negative" style="color: white;"></span></p>
-            </div>
-            <div style="width: 100%; margin-top: 36px;">
-                <button id="refresh" style="outline: none;border: none; width: 253px;height: 63px;background: #4402AF;border-radius: 10px;font-family: 'Arial';font-style: normal;font-weight: 400;font-size: 32px;line-height: 37px;color: #FFFFFF;">
-                    Рестарт
-                </button>
-            </div>
-
+<div class="content">
+    <div class="content_container">
+        <h1>Слово: “<span style="color: #FFC909" id="word"></span>”</h1>
+        <p class="title_first">
+            В ответе напишите слово маленькими буквами. Большую букву поставьте на месте ударения.
+        </p>
+        <p class="title_second">
+            Пример:<br> - Слово: “Молоко”. Ответ: “молокО”.
+        </p>
+        <div class="inputs">
+            <input id="input" class="input" type="text" placeholder="Ответ" onkeyup="keyPress(event)">
+            <button id="button" class="btn_com">Готово</button>
+            <h2 id="answer"></h2>
         </div>
+        <div class="count">
+            <p class="correct">Правильно: <span id="positive" style="color: white;"></span></p>
+            <p class="noCorrect">Неправильно: <span id="negative" style="color: white;"></span></p>
+        </div>
+        <div class="refr">
+            <button class="btn_refr" id="refresh">
+                Рестарт
+            </button>
+        </div>
+
     </div>
-    <script src="./front.js"></script>
+</div>
+<script src="./front.js"></script>
 </body>
 </html>
