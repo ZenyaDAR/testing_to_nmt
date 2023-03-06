@@ -248,9 +248,9 @@ words = [
     ["Ярмарковий", "ярмаркОвий"]
 ];
 const initData = () => {
-    currentWordIndex = 0;
     positiveCounter = 0;
     negativeCounter = 0;
+    generateWord()
     answer.innerHTML = '';
     positive.innerHTML = positiveCounter
     negative.innerHTML= negativeCounter
